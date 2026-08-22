@@ -1,45 +1,59 @@
-# لغت‌نامه
+# 📖 لغت‌نامه (LughatNama)
 
-## Open the project
+<div align="center">
 
-Open this `LughatNama` folder in Android Studio. Use JDK 17 or newer and install Android SDK Platform 35. The Gradle wrapper is included.
+**دیکشنری فارسی آفلاین برای اندروید**
 
-## Build
+کاملاً رایگان، بدون نیاز به اینترنت و با جستجوی سریع لغات
 
-On Windows:
+</div>
 
-```powershell
-.\gradlew.bat assembleDebug
-```
+---
 
-On macOS or Linux:
+## 📱 درباره برنامه
 
-```bash
-./gradlew assembleDebug
-```
+لغت‌نامه یک برنامه اندرویدی ساده و سریع برای دسترسی به واژه‌ها و معنی آن‌ها است.
 
-For a publishable release, choose **Build > Generate Signed Bundle / APK** in Android Studio and sign it with your own release key.
+این برنامه به صورت **کاملاً آفلاین** کار می‌کند و برای مطالعه و یادگیری لغات طراحی شده است.
 
-## APK output
+---
 
-The included, installation-ready universal APK is at:
+## ✨ امکانات
 
-```text
-release/LughatNama.apk
-```
+✅ کاملاً آفلاین  
+✅ بدون نیاز به اینترنت  
+✅ جستجوی سریع لغات  
+✅ نمایش معنی واژه‌ها  
+✅ حجم کم و اجرای سریع  
+✅ رایگان برای همه کاربران  
 
-A local debug build is written to:
+---
 
-```text
-app/build/outputs/apk/debug/app-debug.apk
-```
+## 📥 دانلود برنامه
 
-## Install the APK
+آخرین نسخه اندروید:
 
-Copy `release/LughatNama.apk` to an Android device, allow installation from the app used to open it, then tap the file and choose **Install**.
+[⬇️ دانلود LughatNama APK](https://github.com/Wadan3/persian-vocabulary-app/releases)
 
-With Android Debug Bridge:
+---
 
-```bash
-adb install -r release/LughatNama.apk
-```
+## 📷 QR Code
+
+اسکن کنید و صفحه دانلود را باز کنید:
+
+![QR Code](https://wadan3.github.io/persian-vocabulary-app/)
+
+---
+---
+
+## 🛠️ اطلاعات فنی
+
+- Platform: Android
+- Language: Kotlin
+- Database: Offline JSON Dictionary
+- Build: Android Studio
+
+---
+
+
+ساخته شده با ❤️ برای علاقه‌مندان 
