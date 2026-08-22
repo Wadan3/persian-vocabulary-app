@@ -41,7 +41,7 @@
 
 اسکن کنید و صفحه دانلود را باز کنید:
 
-![QR Code](https://wadan3.github.io/persian-vocabulary-app/)
+![QR Code](qr-code.png)
 
 ---
 ---
