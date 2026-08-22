@@ -142,7 +142,7 @@ private fun Header() {
         Row(verticalAlignment = Alignment.CenterVertically) {
             OrnamentLine()
             Text(
-                text = "واژه و معنای آن، بی نیاز از اینترنت",
+                text = "رساله های مبارک",
                 modifier = Modifier.padding(horizontal = 11.dp),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
