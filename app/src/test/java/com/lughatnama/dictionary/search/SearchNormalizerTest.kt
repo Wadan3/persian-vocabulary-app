@@ -18,4 +18,9 @@ class SearchNormalizerTest {
     fun collapsesRepeatedWhitespace() {
         assertEquals("ایده آلیست", SearchNormalizer.normalize("ایده   آلیست"))
     }
+
+    @Test
+    fun removesInvisibleFormattingCharacters() {
+        assertEquals("فراستمند", SearchNormalizer.normalize("فراست‌مند\u200F"))
+    }
 }

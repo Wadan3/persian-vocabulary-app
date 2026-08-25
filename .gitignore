@@ -18,3 +18,5 @@ secrets.properties
 *.log
 *.tmp
 .DS_Store
+
+app/release/

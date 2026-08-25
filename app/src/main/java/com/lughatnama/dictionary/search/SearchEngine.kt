@@ -14,19 +14,28 @@ object SearchEngine {
         return entries
             .asSequence()
             .mapNotNull { entry ->
+                if (entry.word.isBlank() || entry.meaning.isBlank()) return@mapNotNull null
+
+                val normalizedWord = SearchNormalizer.normalize(entry.normalizedWord)
                 val priority = when {
-                    entry.normalizedWord == normalizedQuery -> 0
-                    entry.normalizedWord.startsWith(normalizedQuery) -> 1
-                    entry.normalizedWord.contains(normalizedQuery) -> 2
+                    normalizedWord == normalizedQuery -> 0
+                    normalizedWord.startsWith(normalizedQuery) -> 1
+                    normalizedWord.contains(normalizedQuery) -> 2
                     else -> return@mapNotNull null
                 }
-                RankedEntry(entry, priority)
+                RankedEntry(
+                    entry = entry,
+                    normalizedWord = normalizedWord,
+                    normalizedMeaning = SearchNormalizer.normalize(entry.meaning),
+                    priority = priority,
+                )
             }
             .sortedWith(
                 compareBy<RankedEntry> { it.priority }
-                    .thenBy { it.entry.normalizedWord.length }
+                    .thenBy { it.normalizedWord.length }
                     .thenBy { it.entry.id },
             )
+            .distinctBy { it.normalizedWord to it.normalizedMeaning }
             .take(limit)
             .map { it.entry }
             .toList()
@@ -34,6 +43,8 @@ object SearchEngine {
 
     private data class RankedEntry(
         val entry: DictionaryEntry,
+        val normalizedWord: String,
+        val normalizedMeaning: String,
         val priority: Int,
     )
 }

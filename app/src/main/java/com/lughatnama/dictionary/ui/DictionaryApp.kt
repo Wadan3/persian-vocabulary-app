@@ -196,7 +196,10 @@ private fun SearchField(
             placeholder = {
                 Text(
                     text = "جستجوی لغت",
+                    modifier = Modifier.fillMaxWidth(),
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.72f),
+                    textAlign = TextAlign.Start,
+                    style = TextStyle(textDirection = TextDirection.Rtl),
                 )
             },
             leadingIcon = {
@@ -221,7 +224,7 @@ private fun SearchField(
             singleLine = true,
             textStyle = MaterialTheme.typography.bodyLarge.merge(
                 TextStyle(
-                    textAlign = TextAlign.End,
+                    textAlign = TextAlign.Start,
                     textDirection = TextDirection.ContentOrRtl,
                 ),
             ),
@@ -277,8 +280,8 @@ private fun ResultsArea(
             )
 
             ContentState.NoResults -> EmptyMessage(
-                title = "این لغت در لغت نامه موجود نیست.",
-                message = "املای واژه را بررسی کنید و دوباره بنویسید.",
+                title = "نتیجه‌ای یافت نشد",
+                message = "لطفاً املای واژه را بررسی کنید.",
             )
 
             ContentState.Results -> LazyColumn(
