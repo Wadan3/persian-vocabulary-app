@@ -271,11 +271,61 @@ h1 {
 
 
 
-<a class="button" href="https://github.com/Wadan3/persian-vocabulary-app/releases/download/v1.1.0/app-release.apk">
+<button class="button" onclick="installApp()">
+📱 نصب لغت‌نامه
+</button>
 
-⬇️ دانلود برنامه
+<br><br>
 
+<a href="https://github.com/Wadan3/persian-vocabulary-app/releases/download/v1.1.0/app-release.apk">
+نسخه APK اندروید
 </a>
+
+
+<script>
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+
+    e.preventDefault();
+
+    deferredPrompt = e;
+
+});
+
+
+function installApp() {
+
+
+    if (deferredPrompt) {
+
+
+        deferredPrompt.prompt();
+
+
+        deferredPrompt.userChoice.then(() => {
+
+            deferredPrompt = null;
+
+        });
+
+
+    } else {
+
+
+        alert(
+        "برای آیفون: از گزینه Share سپس Add to Home Screen استفاده کنید"
+        );
+
+
+    }
+
+
+}
+
+</script>
+
 
 
 
