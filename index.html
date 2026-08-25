@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#b8860b">
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
+
 
 <title>دانلود لغت‌نامه</title>
 
+
 <style>
+
 body {
     margin:0;
     background:#faf7ef;
@@ -15,95 +32,160 @@ body {
     text-align:center;
 }
 
+
 .container {
     max-width:700px;
     margin:auto;
     padding:60px 20px;
 }
 
+
 .logo {
     font-size:80px;
 }
+
 
 h1 {
     font-size:45px;
     margin:10px;
 }
 
+
 .subtitle {
     font-size:22px;
     color:#666;
 }
 
+
 .card {
+
     background:white;
+
     margin-top:40px;
+
     padding:35px;
+
     border-radius:30px;
+
     box-shadow:0 15px 40px #00000015;
+
 }
+
+
 
 .version {
+
     font-size:25px;
+
     font-weight:bold;
+
 }
+
+
 
 .features {
+
     text-align:right;
+
     font-size:20px;
+
     line-height:2.2;
+
     margin-top:25px;
+
 }
 
 
-/* هشدار نصب */
+
+/* راهنمای نصب */
+
 .notice {
+
     margin-top:35px;
+
     background:#fff3cd;
+
     color:#664d03;
+
     padding:20px;
+
     border-radius:20px;
+
     font-size:17px;
+
     line-height:2;
+
     border:1px solid #ffe69c;
+
 }
+
 
 
 .button {
+
     display:inline-block;
+
     margin-top:35px;
+
     background:#b8860b;
+
     color:white;
+
     padding:18px 55px;
+
     border-radius:25px;
+
     text-decoration:none;
+
     font-size:23px;
+
     transition:0.3s;
+
 }
 
+
+
 .button:hover {
+
     opacity:0.8;
+
 }
+
 
 
 .footer {
+
     margin-top:40px;
+
     color:#777;
+
 }
+
+
 </style>
+
 
 </head>
 
 
+
 <body>
+
 
 <div class="container">
 
 
-<div class="logo">📖</div>
+
+<div class="logo">
+📖
+</div>
 
 
-<h1>لغت‌نامه</h1>
+
+<h1>
+لغت‌نامه
+</h1>
+
 
 
 <div class="subtitle">
@@ -112,12 +194,15 @@ h1 {
 
 
 
+
 <div class="card">
+
 
 
 <div class="version">
 نسخه 1.1.0
 </div>
+
 
 
 <p>
@@ -129,34 +214,60 @@ h1 {
 <div class="features">
 
 ✅ کاملاً رایگان<br>
+
 ✅ بدون نیاز به اینترنت<br>
+
 ✅ جستجوی سریع لغات<br>
+
 ✅ نمایش معنی واژه‌ها<br>
+
 ✅ حجم کم و اجرای سریع
 
 </div>
 
 
 
+
+
 <div class="notice">
+
 
 ⚠️ راهنمای نصب
 
+
 <br><br>
+
 
 این برنامه خارج از Google Play منتشر شده است.
 
+
 <br>
+
 
 ممکن است هنگام نصب، Google Play Protect هشدار امنیتی نشان دهد.
 
+
 <br>
 
-برای ادامه نصب، گزینه 
+
+برای ادامه نصب گزینه:
+
+<br>
+
+
 <b>Install anyway</b>
+
+
+<br>
+
+
 را انتخاب کنید.
 
+
 </div>
+
+
+
 
 
 
@@ -172,6 +283,8 @@ h1 {
 
 
 
+
+
 <div class="footer">
 
 ساخته شده برای دوستداران ❤️
@@ -179,8 +292,11 @@ h1 {
 </div>
 
 
+
 </div>
 
 
+
 </body>
+
 </html>
